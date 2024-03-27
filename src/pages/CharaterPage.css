@@ -1,0 +1,241 @@
+@media all and (max-width:767px) {
+	.CharaterPage {
+		margin: 20px;
+	}
+
+	.text-bold {
+		font-weight: bold;
+	}
+
+	.content-box {
+		margin-top: 20px;
+	}
+
+	.content-title>span {
+		font-size: 24px;
+		font-weight: bolder;
+	}
+
+	.charater-skins>img {
+		width: 70%;
+	}
+
+	.charater-name>.name {
+		display: inline-block;
+		margin: 10px;
+	}
+
+	.charater-name>.ko {
+		font-size: 24px;
+	}
+
+	.charater-tag>.tag {
+		display: inline-block;
+		margin-right: 10px;
+	}
+
+	.charater-info {
+		border: solid;
+	}
+
+	.charater-info>div {
+		margin: 5px 0;
+	}
+
+	.skill-info,
+	.reso-upgrade,
+	.awake-upgrade {
+		padding: 10px;
+		margin: 5px 0;
+		display: flex;
+		border: solid;
+	}
+
+	.life-skill {
+		padding: 10px;
+		margin: 5px 0;
+		border: solid;
+	}
+
+	.charater-skill .derive {
+		background-color: #dcdcdc;
+		margin-left: 15px;
+	}
+
+	.skill-info>img,
+	.reso-upgrade>img,
+	.awake-upgrade>img {
+		width: 70px;
+		height: 70px;
+	}
+
+	.skill-detail,
+	.reso-upgrade-detail,
+	.awake-upgrade-detail {
+		margin-left: 10px;
+	}
+
+	.skill__name,
+	.skill__count,
+	.skill__cost,
+	.skill__derive,
+	.reso-upgrade__name,
+	.reso-upgrade__no,
+	.awake-upgrade__name,
+	.awake-upgrade__no {
+		display: inline-block;
+		margin-right: 10px;
+	}
+
+	.skill__info,
+	.reso-upgrade__info,
+	.reso-upgrade__life-upgrade,
+	.awake-upgrade__info,
+	.life-skill__info {
+		margin-top: 10px;
+	}
+
+	.non-derive .skill__derive,
+	.derive .skill__count {
+		display: none;
+	}
+
+	.skill__derive {
+		font-size: 14px;
+		padding: 3px;
+		background-color: #a0a0a0;
+	}
+
+	.reso-upgrade-icon {
+		display: flex;
+	}
+
+	.reso-upgrade__icon {
+		width:100px;
+	}
+
+	.reso-upgrade__icon>img {
+		width:100%;
+	}
+}
+
+@media all and (min-width:768px) {
+	.CharaterPage {
+		margin: 20px;
+	}
+
+	.text-bold {
+		font-weight: bold;
+	}
+
+	.content-box {
+		margin-top: 20px;
+	}
+
+	.content-title>span {
+		font-size: 24px;
+		font-weight: bolder;
+	}
+
+	.charater-skins>img {
+		width: 30%;
+	}
+
+	.charater-name>.name {
+		display: inline-block;
+		margin: 10px;
+	}
+
+	.charater-name>.ko {
+		font-size: 24px;
+	}
+
+	.charater-tag>.tag {
+		display: inline-block;
+		margin-right: 10px;
+	}
+
+	.charater-info {
+		border: solid;
+	}
+
+	.charater-info>div {
+		margin: 5px 0;
+	}
+
+	.skill-info,
+	.reso-upgrade,
+	.awake-upgrade {
+		padding: 10px;
+		margin: 5px 0;
+		display: flex;
+		border: solid;
+	}
+
+	.life-skill {
+		padding: 10px;
+		margin: 5px 0;
+		border: solid;
+	}
+
+	.charater-skill .derive {
+		background-color: #dcdcdc;
+		margin-left: 15px;
+	}
+
+	.skill-info>img,
+	.reso-upgrade>img,
+	.awake-upgrade>img {
+		width: 70px;
+		height: 70px;
+	}
+
+	.skill-detail,
+	.reso-upgrade-detail,
+	.awake-upgrade-detail {
+		margin-left: 10px;
+	}
+
+	.skill__name,
+	.skill__count,
+	.skill__cost,
+	.skill__derive,
+	.reso-upgrade__name,
+	.reso-upgrade__no,
+	.awake-upgrade__name,
+	.awake-upgrade__no {
+		display: inline-block;
+		margin-right: 10px;
+	}
+
+	.skill__info,
+	.reso-upgrade__info,
+	.reso-upgrade__life-upgrade,
+	.awake-upgrade__info,
+	.life-skill__info {
+		margin-top: 10px;
+	}
+
+	.non-derive .skill__derive,
+	.derive .skill__count {
+		display: none;
+	}
+
+	.skill__derive {
+		font-size: 14px;
+		padding: 3px;
+		background-color: #a0a0a0;
+	}
+
+	.reso-upgrade-icon {
+		display: flex;
+	}
+
+	.reso-upgrade__icon {
+		width:100px;
+	}
+
+	.reso-upgrade__icon>img {
+		width:100%;
+	}
+}

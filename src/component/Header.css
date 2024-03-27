@@ -1,0 +1,45 @@
+@media all and (max-width:767px) {
+	.Header {
+        height:60px;
+        background-color: #bbbde4;
+    }
+    
+    .header {
+        display: flex;
+        padding: 0 20px;
+        height: 100%;
+    }
+
+    .header-left {
+        display: flex;
+        align-items: center;
+    }
+
+    .home-icon {
+        font-size: 24px;
+        font-weight: bolder;
+    }
+}
+
+@media all and (min-width:768px) {
+    .Header {
+        height:60px;
+        background-color: #bbbde4;
+    }
+    
+    .header {
+        display: flex;
+        padding: 0 20px;
+        height: 100%;
+    }
+
+    .header-left {
+        display: flex;
+        align-items: center;
+    }
+
+    .home-icon {
+        font-size: 24px;
+        font-weight: bolder;
+    }
+}
