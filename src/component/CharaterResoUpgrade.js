@@ -39,7 +39,7 @@ function CharaterResoUpgrade(parms) {
 			<div className="content-title"><span>공명 효과</span></div>
 			{charData.resoUpgrade.map((a, i) => { return(
 				<div className="reso-upgrade">
-					<img src={'/img/charater/' + charName + '/' + charData.resoUpgrade[i].icon + '.png'} alt={`resoUpgrade${i + 1}`}></img>
+					<img src={process.env.PUBLIC_URL + '/img/charater/' + charName + '/' + charData.resoUpgrade[i].icon + '.png'} alt={`resoUpgrade${i + 1}`}></img>
 					<div className="reso-upgrade-detail">
 						<div className="reso-upgrade__name text-bold">{charData.resoUpgrade[i].name}</div>
 						<div className="reso-upgrade__no">{i + 1}공명</div>

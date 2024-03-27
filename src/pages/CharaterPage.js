@@ -16,7 +16,7 @@ function CharaterPage() {
 	return (
 		<div className="CharaterPage">
 			<div className="charater-skins">
-				{charData.skins.map((a, i) => { return (<img src={'/img/charater/' + charName + '/' + charData.skins[i].file + '.png'} alt={`skin${i + 1}`}></img>) })}
+				{charData.skins.map((a, i) => { return (<img src={process.env.PUBLIC_URL + '/img/charater/' + charName + '/' + charData.skins[i].file + '.png'} alt={`skin${i + 1}`}></img>) })}
 			</div>
 			<div className="charater-profile">
 				<div className="charater-name">
@@ -50,7 +50,7 @@ function CharaterPage() {
 
 						return (
 							<div className={classOption}>
-								<img src={'/img/charater/' + charName + '/' + charData.skill[i].icon + '.png'} alt={`skill${i + 1}`}></img>
+								<img src={process.env.PUBLIC_URL + '/img/charater/' + charName + '/' + charData.skill[i].icon + '.png'} alt={`skill${i + 1}`}></img>
 								<div className="skill-detail">
 									<div className="skill__derive">파생 카드</div>
 									<div className="skill__name text-bold">{charData.skill[i].name}</div>
