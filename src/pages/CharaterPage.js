@@ -21,6 +21,16 @@ const skillColor = (color) => {
 	}
 }
 
+const positionIcon = (position) => {
+	if (position == "전위") {
+		return "◇◇◆";
+	} else if (position == "중위") {
+		return "◇◆◇";
+	} else if (position == "후위") {
+		return "◆◇◇";
+	} 
+}
+
 function CharaterPage() {
 	const { charName } = useParams();
 
@@ -55,7 +65,7 @@ function CharaterPage() {
 						</div>
 					</div>
 					<div className="profile-area charater-info-top space-between">
-						<div className="charater-position">{charData.position}</div>
+						<div className="charater-position">{charData.position} {positionIcon(charData.position)}</div>
 						<div className="charater-skill-color display-flex">
 							{charData.skill.map((a, i) => { 
 								const style = { backgroundColor: skillColor(charData.skill[i].color) }
@@ -111,16 +121,20 @@ function CharaterPage() {
 						})}
 					</div>
 					<div className="skill-detail-area">
-						<div className={(charData.skill[skillKey].derive == 1) ? `skill-detail-icon ${skillKey + 1} derive` : `skill-detail-icon ${skillKey + 1} non-derive`}>
-							<img src={process.env.PUBLIC_URL + '/img/charater/' + charName + '/' + charData.skill[skillKey].icon + '.png'} alt={`skill${skillKey + 1}`}></img>
-							<div className="skill-detail">
-								<div className="skill__derive">파생 카드</div>
-								<div className="skill__name text-bold">{charData.skill[skillKey].name}</div>
+						<div className={(charData.skill[skillKey].derive == 1) ? `skill-detail ${skillKey + 1} derive` : `skill-detail ${skillKey + 1} non-derive`}>
+							<div className="skill-detail-icon">
+								<img src={process.env.PUBLIC_URL + '/img/charater/' + charName + '/' + charData.skill[skillKey].icon + '.png'} alt={`skill${skillKey + 1}`}></img>
+							</div>
+							<div className="skill-detail-wrap">
+								<div className="display-flex">
+									<div className="skill__derive">파생 카드</div>
+									<div className="skill__name text-bold">{charData.skill[skillKey].name}</div>
+								</div>
 								<div className="skill__count">수량 : {charData.skill[skillKey].count}개</div>
-								<div className="skill__cost">Cost : {charData.skill[skillKey].cost}</div>
-								<div className="skill__info json-data">{charData.skill[skillKey].info}<br />{charData.skill[skillKey].damage}</div>
+								<div className="skill__cost">Cost {charData.skill[skillKey].cost}</div>
 							</div>
 						</div>
+						<div className="skill__info json-data">{charData.skill[skillKey].info}<br /><br />{charData.skill[skillKey].damage}</div>
 					</div>
 				</div>
 				<CharaterResoUpgrade data={charData} key={returnIndex} name={charName} />

@@ -138,7 +138,7 @@ a { text-decoration: none; color: inherit; }
 	}
 
 	.CharaterPage {
-		width:80%;
+		width: 70%;
 		margin: auto;
 		padding-top: 1.5rem;
 	}
@@ -156,7 +156,7 @@ a { text-decoration: none; color: inherit; }
 
 	.profile-area { display: flex; }
 
-	.area-left>img { width:100%; max-height: 41rem; object-fit: contain; }
+	.area-left>img { width:100%; max-height: 42rem; object-fit: contain; }
 
 	.charater-name { flex-direction: column; }
 	.name.ko {
@@ -182,7 +182,7 @@ a { text-decoration: none; color: inherit; }
 
 	.skill-color-box {
 		width: 2.5rem;
-		height: .4rem;
+		height: .5rem;
 		border: solid .1rem;
 	}
 
@@ -249,10 +249,10 @@ a { text-decoration: none; color: inherit; }
 
 	.skill-icon-area {
 		width: 18%;
-		min-width: 6.3rem;
-		max-width: 8rem;
+		min-width: 7rem;
+		max-width: 9rem;
 		height: auto;
-		padding: .4rem;
+		padding: .6rem;
 		border: solid 1px;
 		display: flex;
 		flex-direction: column;
@@ -263,13 +263,13 @@ a { text-decoration: none; color: inherit; }
 		width: 100%;
 		height: 0;
 		padding-bottom: 100%;
-		margin-bottom: .4rem;
+		margin-bottom: .6rem;
 		cursor:pointer;
 	}
 
 	.skill-icon:last-child { margin-bottom: 0; }
 
-	.skill-icon.derive { width: 80%; padding-bottom: 80%; } 
+	.skill-icon.derive { width: 85%; padding-bottom: 85%; } 
 
 	.skill-icon-area img {
 		width: 100%;
@@ -278,17 +278,51 @@ a { text-decoration: none; color: inherit; }
 	.skill-detail-area {
 		width: 100%;
 		margin-left: 1.2rem;
-		padding: .8rem;
+		padding: 2rem;
 		border: solid 1px;
 	}
 
-	.skill-detail-icon.non-derive .skill__derive { display: none; }
+	.skill-detail.non-derive .skill__derive { display: none; }
 
+	.skill-detail { display: flex; justify-content: space-between; }
 
+	.skill-detail-icon { width: 30%; max-width: 12rem; min-width: 8rem; }
+	.skill-detail-icon img { width: 100%; object-fit: contain; }
 
+	.skill-detail-wrap {
+		display: flex;
+		flex-direction: column;
+	}
 
+	.skill-detail-wrap .display-flex { align-items: center; justify-content: flex-end; }
 
+	.skill__name { font-size: 2rem; font-weight: bold; }
 
+	.skill__derive {
+		font-size: 1rem;
+		font-weight: bold;
+		padding: .2rem .5rem;
+		border-radius: .3rem;
+		background-color: #cfcfcf;
+		margin-right: .8rem;
+	}
+
+	.skill__count,
+	.skill__cost {
+		display: flex;
+		justify-content: flex-end;
+		font-size: 1.3rem;
+		margin-top: .5rem;
+	}
+
+	.skill-detail.derive .skill__count { display: none; }
+
+	.skill__info {
+		margin-top: 1rem;
+		font-size: 1.3rem;
+		line-height: 2.1rem;
+		word-break: keep-all;
+	}
 
 
 
