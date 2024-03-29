@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+@import "//cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css";
+
+div { box-sizing: border-box; }
+.json-data { white-space: pre-wrap; }
+.display-flex { display: flex; }
+.font-bold { font-weight: bold; }
+.space-between { justify-content: space-between; }
+a { text-decoration: none; color: inherit; }
+
 @media all and (max-width:767px) {
 	.CharaterPage {
 		margin: 20px;
-	}
-
-	.text-bold {
-		font-weight: bold;
 	}
 
 	.content-box {
@@ -12,11 +18,15 @@
 	}
 
 	.content-title>span {
-		font-size: 24px;
+		font-size: 2.25rem;
 		font-weight: bolder;
 	}
 
-	.charater-skins>img {
+	.skin-wrap {
+		width:100%;
+	}
+
+	.skin-wrap>img {
 		width: 70%;
 	}
 
@@ -26,7 +36,7 @@
 	}
 
 	.charater-name>.ko {
-		font-size: 24px;
+		font-size: 2.25rem;
 	}
 
 	.charater-tag>.tag {
@@ -101,7 +111,7 @@
 	}
 
 	.skill__derive {
-		font-size: 14px;
+		font-size: 1.25rem;
 		padding: 3px;
 		background-color: #a0a0a0;
 	}
@@ -120,122 +130,194 @@
 }
 
 @media all and (min-width:768px) {
+	html {
+		/*font-family: "Noto Serif KR", serif;*/
+		/*ont-family: 'KoPub Batang';*/
+		font-weight: 500;
+		font-style: normal;
+	}
+
 	.CharaterPage {
-		margin: 20px;
+		width:80%;
+		margin: auto;
+		padding-top: 1.5rem;
 	}
 
-	.text-bold {
+	.charater-profile {
+		display: flex;
+		justify-content: space-between;
+		border: solid 1px;
+		padding: 1rem;
+	}
+
+	.area-left, .area-right { flex-direction: column; }
+	.area-left { width: 44%; }
+	.area-right { width: 54%; }
+
+	.profile-area { display: flex; }
+
+	.area-left>img { width:100%; max-height: 41rem; object-fit: contain; }
+
+	.charater-name { flex-direction: column; }
+	.name.ko {
+		font-size: 3rem;
+		margin: -.7rem 7rem 0 0;
+		font-weight: 900;
+		color: #000000;
+	}
+	.name {
+		font-size: 1.5rem;
+		padding-right: .7rem;
+		font-weight: 700;
+		color: #5e5e5e;
+		text-transform: capitalize;
+	}
+
+	.charater-info-top { margin-top: 1rem; }
+
+	.charater-skill-color { 
+		align-content: center;
+		flex-wrap: wrap;
+	}
+
+	.skill-color-box {
+		width: 2.5rem;
+		height: .4rem;
+		border: solid .1rem;
+	}
+
+	.charater-rare { margin-left: -.6rem; }
+	.charater-rare>img { height: 3.25rem; }
+	.charater-team-logo { width: 7.5rem; align-content: center; }
+	.charater-team-logo>img { width: 100%;}
+
+	.charater-position { font-size: 1.3rem; font-weight: bold; }
+
+	.charater-tag { margin-top: 1rem; flex-wrap: wrap; }
+	.charater-tag .tag {
+		font-size: 1.1rem;
 		font-weight: bold;
-	}
-
-	.content-box {
-		margin-top: 20px;
-	}
-
-	.content-title>span {
-		font-size: 24px;
-		font-weight: bolder;
-	}
-
-	.charater-skins>img {
-		width: 30%;
-	}
-
-	.charater-name>.name {
-		display: inline-block;
-		margin: 10px;
-	}
-
-	.charater-name>.ko {
-		font-size: 24px;
-	}
-
-	.charater-tag>.tag {
-		display: inline-block;
-		margin-right: 10px;
+		background-color: #E9E9EC;
+		border-radius: 6px;
+		margin: .25rem .5rem .25rem 0;
+		padding: .25rem .5rem;
 	}
 
 	.charater-info {
-		border: solid;
+		margin-top: 1rem;
 	}
 
-	.charater-info>div {
-		margin: 5px 0;
-	}
-
-	.skill-info,
-	.reso-upgrade,
-	.awake-upgrade {
-		padding: 10px;
-		margin: 5px 0;
+	.charater-info-area {
 		display: flex;
-		border: solid;
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
-
-	.life-skill {
-		padding: 10px;
-		margin: 5px 0;
-		border: solid;
-	}
-
-	.charater-skill .derive {
-		background-color: #dcdcdc;
-		margin-left: 15px;
-	}
-
-	.skill-info>img,
-	.reso-upgrade>img,
-	.awake-upgrade>img {
-		width: 70px;
-		height: 70px;
-	}
-
-	.skill-detail,
-	.reso-upgrade-detail,
-	.awake-upgrade-detail {
-		margin-left: 10px;
-	}
-
-	.skill__name,
-	.skill__count,
-	.skill__cost,
-	.skill__derive,
-	.reso-upgrade__name,
-	.reso-upgrade__no,
-	.awake-upgrade__name,
-	.awake-upgrade__no {
-		display: inline-block;
-		margin-right: 10px;
-	}
-
-	.skill__info,
-	.reso-upgrade__info,
-	.reso-upgrade__life-upgrade,
-	.awake-upgrade__info,
-	.life-skill__info {
-		margin-top: 10px;
-	}
-
-	.non-derive .skill__derive,
-	.derive .skill__count {
-		display: none;
-	}
-
-	.skill__derive {
-		font-size: 14px;
-		padding: 3px;
-		background-color: #a0a0a0;
-	}
-
-	.reso-upgrade-icon {
+	
+	.info-area-item {
+		width: 49%;
 		display: flex;
+		padding: .7rem;
+		margin-bottom: .5rem;
+		justify-content: flex-start;
+		box-sizing: border-box;
+		background-color: #eeeeee;
+		border-radius: .5rem;
+	}
+	
+	.info-name {
+		display: flex;
+		font-size: 1.1rem;
+		font-weight: bold;
+		white-space: nowrap;
 	}
 
-	.reso-upgrade__icon {
-		width:100px;
+	.info-detail { 
+		padding-left: .5rem;
+		font-size: 1.1rem;
 	}
 
-	.reso-upgrade__icon>img {
-		width:100%;
+	.charater-story {
+		font-size: 1.1rem;
+		line-height: 160%;
+		padding-top: .5rem;
+		word-break: keep-all;
+	}
+
+	.charater-skill {
+
+	}
+
+	.skill-icon-area {
+		width: 18%;
+		min-width: 6.3rem;
+		max-width: 8rem;
+		height: auto;
+		padding: .4rem;
+		border: solid 1px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+
+	.skill-icon {
+		width: 100%;
+		height: 0;
+		padding-bottom: 100%;
+		margin-bottom: .4rem;
+		cursor:pointer;
+	}
+
+	.skill-icon:last-child { margin-bottom: 0; }
+
+	.skill-icon.derive { width: 80%; padding-bottom: 80%; } 
+
+	.skill-icon-area img {
+		width: 100%;
+	}
+
+	.skill-detail-area {
+		width: 100%;
+		margin-left: 1.2rem;
+		padding: .8rem;
+		border: solid 1px;
+	}
+
+	.skill-detail-icon.non-derive .skill__derive { display: none; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+	.skin-img {
+		position: relative;
+		width: 70%;
+		height: 0;
+		padding-top: 70%;
+	}
+	
+	.skin-img>img {
+		position: absolute;
+		width: auto;
+		min-width: 25rem;
+		height: 100%;
+		top: 0;
+  		left: 0;
+	}
+
+	.skin-name {
+		height: 1.9rem;
+	}
+
+
+	.skin-info {
+		
 	}
 }
