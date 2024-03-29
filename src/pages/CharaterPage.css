@@ -139,6 +139,7 @@ a { text-decoration: none; color: inherit; }
 
 	.CharaterPage {
 		width: 70%;
+		min-width: 50rem;
 		margin: auto;
 		padding-top: 1.5rem;
 	}
