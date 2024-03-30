@@ -1,9 +1,7 @@
 import React from "react";
 
-function CharaterLifeSkill(parms) {
-	const charName = parms.name;
-	const returnIndex = parms.key;
-	const charData = parms.data;
+function CharLifeSkill({ charData }) {
+	const charName = charData.name.en;
 
 	return (
 		<div className="content-box charater-lifeSkill">
@@ -20,4 +18,4 @@ function CharaterLifeSkill(parms) {
 	);
 }
 
-export default CharaterLifeSkill;
+export default CharLifeSkill;

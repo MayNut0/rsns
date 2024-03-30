@@ -1,9 +1,7 @@
 import React from "react";
 
-function CharaterAwakeUpgrade(parms) {
-	const charName = parms.name;
-	const returnIndex = parms.key;
-	const charData = parms.data;
+function CharAwakeUp({ charData }) {
+	const charName = charData.name.en;
 
 	return (
 		<div className="content-box charater-awakeUpgrade">
@@ -22,4 +20,4 @@ function CharaterAwakeUpgrade(parms) {
 	);
 }
 
-export default CharaterAwakeUpgrade;
+export default CharAwakeUp;

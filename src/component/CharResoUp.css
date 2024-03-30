@@ -1,0 +1,70 @@
+div { box-sizing: border-box; }
+
+.charater-resoUpgrade {
+  display: flex;
+  max-width: 50rem;
+}
+
+.resoup-icon-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  max-width: 25rem;
+  height: 25rem;
+  border: solid 1px;
+  background-image: url('../reosbg.png');
+  background-size: cover;
+  padding: .7rem;
+}
+
+.resoup-icon-table {
+  display: flex;
+  justify-content: space-between;
+  height: 6.6rem;
+}
+
+.resoup-icon-table.middle {
+  justify-content: center;
+  height: 8rem;
+}
+
+.resoup-icon {
+  height: 100%;
+  cursor:pointer;
+}
+
+.resoup-icon img { height: 100%; }
+
+.resoup-detail-area {
+  width: 50%;
+  max-width: 23.8rem;
+  margin-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.resoup-detail-area img {
+  width: 32%;
+}
+
+.resoup-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resoup-detail div {
+  margin-top: .5rem;
+}
+
+.resoup__name {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.resoup__no { font-size: .9rem; }
+.resoup__info { font-size: 1.1rem; word-break: keep-all; }
+.resoup__life-upgrade { font-size: 1.1rem; }

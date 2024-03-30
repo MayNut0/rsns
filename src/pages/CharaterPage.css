@@ -137,6 +137,14 @@ a { text-decoration: none; color: inherit; }
 		font-style: normal;
 	}
 
+	.loading-page {
+		width: 100%;
+		min-width: 50rem;
+		display: flex;
+		justify-content: center;
+		font-size: 3rem;
+	}
+
 	.CharaterPage {
 		width: 70%;
 		min-width: 50rem;
@@ -245,7 +253,7 @@ a { text-decoration: none; color: inherit; }
 	}
 
 	.charater-skill {
-
+		max-width: 50rem;
 	}
 
 	.skill-icon-area {
@@ -287,7 +295,7 @@ a { text-decoration: none; color: inherit; }
 
 	.skill-detail { display: flex; justify-content: space-between; }
 
-	.skill-detail-icon { width: 30%; max-width: 12rem; min-width: 8rem; }
+	.skill-detail-icon { width: 30%; max-width: 11rem; min-width: 8rem; }
 	.skill-detail-icon img { width: 100%; object-fit: contain; }
 
 	.skill-detail-wrap {

@@ -5,7 +5,7 @@ import './App.css';
 import Header from './component/Header';
 import Footer from './component/Footer';
 import HomePage from './pages/HomePage';
-import CharaterPage from './pages/CharaterPage';
+import CharPage from './pages/CharPage';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={ <HomePage /> } />
-        <Route path='/:charName' element={ <CharaterPage /> } />
+        <Route path='/charater/:charName' element={ <CharPage /> } />
       </Routes>
       <Footer />
     </div>

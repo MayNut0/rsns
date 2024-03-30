@@ -29,6 +29,7 @@
     
     .header {
         width: 70%;
+        min-width: 50rem;
         display: flex;
         margin: auto;
         height: 100%;
