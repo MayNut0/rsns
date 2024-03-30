@@ -1,8 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-//import charaterData from '../assets/charaterData.json';
-import charaterData from '../charater.json';
+import charData from '../assets/charData.json';
 
 function HomePage() {
     const navigate = useNavigate();
@@ -10,8 +9,8 @@ function HomePage() {
     return (
         <div className="Home">
             <div className="charaterList">
-                { charaterData.map((a, i) => {
-                    const charName = charaterData[i];
+                { charData.map((a, i) => {
+                    const charName = charData[i].name;
                     return ( <button type='button' onClick={() => { navigate(`/charater/${charName.en}`) }}>{charName.ko}</button> )
                 }) }
             </div>
