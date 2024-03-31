@@ -8,8 +8,8 @@ function CharResoUp({ charData }) {
 
 	return (
 		<>
-		<div className="content-title"><span>공명 효과</span></div>
 		<div className="content-box charater-resoUpgrade">
+			<div className="title-reso-upgrade"><span>공명 효과</span></div>
 			<div className="resoup-icon-area">
 				<div className="resoup-icon-table">
 					<div className="resoup-icon" onClick={() => { setResoUpKey(resoUpKey = 1)}}>

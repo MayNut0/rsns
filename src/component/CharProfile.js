@@ -30,68 +30,66 @@ const CharProfile = ({ charData }) => {
 	const nameZh = charData.name.zh;
 
 	return (
-		<div className="charater-profile">
-			<div className="area-left">
+		<div className="section-profile">
+			<div className="section-profile__left">
 				<img src={process.env.PUBLIC_URL + '/img/charater/' + nameEn + '/' + charData.skins[0].file + '.png'} alt={`skin0`}></img>
 			</div>
-			<div className="area-right display-flex">
-				<div className="profile-area space-between">
-					<div className="charater-name display-flex">
-						<div className="charater-rare">
+			<div className="section-profile__right">
+				<div className="box-basicInfo">
+					<div className="box-basicInfo__left">
+						<div className="icon-charater-rare">
 							<img src={process.env.PUBLIC_URL + '/img/rare/' + charData.rare + '.png'} alt='rare'></img>
 						</div>
-						<div className="name ko">{nameKo}</div>
-						<div className="display-flex">
-							<div className="name en">{nameEn}</div>
-							<div className="name zh">{nameZh}</div>
+						<div className="text-charater-name__ko">{nameKo}</div>
+						<div className="box-charater-name-other">
+							<div className="text-charater-name__en">{nameEn}</div>
+							<div className="text-charater-name__zh">{nameZh}</div>
 						</div>
 					</div>
-					<div className="charater-team-logo">
+					<div className="logo-charater-team">
 						<img src={process.env.PUBLIC_URL + '/img/logo/' + charData.teamLogo + '.png'} alt='teamlogo'></img>
 					</div>
 				</div>
-				<div className="profile-area charater-info-top space-between">
-					<div className="charater-position">{charData.position} {positionIcon(charData.position)}</div>
-					<div className="charater-skill-color display-flex">
+				<div className="box-charater-case">
+					<div className="box-charater-position">{charData.position} {positionIcon(charData.position)}</div>
+					<div className="box-charater-skill-color display-flex">
 						{charData.skill.map((a, i) => {
 							const style = { backgroundColor: skillColor(charData.skill[i].color) }
 							if (charData.skill[i].derive == 0)
-								return (<div style={style} className={"skill-color-box"}> </div>)
+								return (<div style={style} className={"color-charater-skill"}> </div>)
 						})}
 					</div>
 				</div>
-				<div className="charater-tag display-flex">
-					{charData.tag.map((a, i) => { return (<div className={"tag " + (i + 1)}>{charData.tag[i]}</div>) })}
+				<div className="box-charater-tag">
+					{charData.tag.map((a, i) => { return (<div className={"tag__" + (i + 1)}>{charData.tag[i]}</div>) })}
 				</div>
-				<div className="charater-info content-box">
-					<div className="charater-info-area">
-						<div className="info-area-item charater-height">
-							<div className="info-name"><span>신장</span></div>
-							<div className="info-detail">{charData.height}</div>
-						</div>
-						<div className="info-area-item charater-birth">
-							<div className="info-name"><span>생일</span></div>
-							<div className="info-detail">{charData.birth}</div>
-						</div>
-						<div className="info-area-item charater-from">
-							<div className="info-name"><span>출신</span></div>
-							<div className="info-detail">{charData.from}</div>
-						</div>
-						<div className="info-area-item charater-from">
-							<div className="info-name"><span>소속</span></div>
-							<div className="info-detail">{charData.team}</div>
-						</div>
-						<div className="info-area-item charater-cv jp">
-							<div className="info-name"><span>CV(日)</span></div>
-							<div className="info-detail"><a href={`https://www.google.com/search?q=${charData.cv.jp}`}>{charData.cv.jp}</a></div>
-						</div>
-						<div className="info-area-item charater-cv cn">
-							<div className="info-name"><span>CV(中)</span></div>
-							<div className="info-detail"><a href={`https://www.google.com/search?q=${charData.cv.cn}`}>{charData.cv.cn}</a></div>
-						</div>
+				<div className="box-charater-info">
+					<div className="box-charater-info__box charater-height">
+						<div className="text-info__name"><span>신장</span></div>
+						<div className="text-info__detail">{charData.height}</div>
 					</div>
-					<div className="charater-story json-data">{charData.story}</div>
-				</div>
+					<div className="box-charater-info__box charater-birth">
+						<div className="text-info__name"><span>생일</span></div>
+						<div className="text-info__detail">{charData.birth}</div>
+					</div>
+					<div className="box-charater-info__box charater-from">
+						<div className="text-info__name"><span>출신</span></div>
+						<div className="text-info__detail">{charData.from}</div>
+					</div>
+					<div className="box-charater-info__box charater-from">
+						<div className="text-info__name"><span>소속</span></div>
+						<div className="text-info__detail">{charData.team}</div>
+					</div>
+					<div className="box-charater-info__box charater-cv jp">
+						<div className="text-info__name"><span>CV(日)</span></div>
+						<div className="text-info__detail"><a href={`https://www.google.com/search?q=${charData.cv.jp}`}>{charData.cv.jp}</a></div>
+					</div>
+					<div className="box-charater-info__box charater-cv cn">
+						<div className="text-info__name"><span>CV(中)</span></div>
+						<div className="text-info__detail"><a href={`https://www.google.com/search?q=${charData.cv.cn}`}>{charData.cv.cn}</a></div>
+					</div>
+					</div>
+				<div className="box-charater-story json-data">{charData.story}</div>
 			</div>
 		</div>
 	);

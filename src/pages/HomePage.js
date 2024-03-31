@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 
 import charData from '../assets/charData.json';
 
+import './HomePage.css';
+
 function HomePage() {
     const navigate = useNavigate();
 

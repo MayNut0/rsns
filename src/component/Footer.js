@@ -5,7 +5,9 @@ import './Footer.css';
 function Footer() {
     return (
         <div className="Footer">
-            Footer
+            <div className="section-footer">
+                MayNut
+            </div>
         </div>
     )
 }

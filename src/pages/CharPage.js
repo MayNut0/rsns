@@ -17,15 +17,15 @@ const TestPage = () => {
 	const charData = origincharData[returnIndex];
 
 	return (
-		<div className="CharaterPage">
+		<div className="sections-charpage">
 			<CharProfile charData={charData} />
-			<div className="charater-detail">
-				<CharSkill charData={charData} />
+			<CharSkill charData={charData} />
+			<div className='sections-reso-awake'>
 				<CharResoUp charData={charData} />
 				<CharAwakeUp charData={charData} />
-				<CharLifeSkill charData={charData} />
-				<CharSkins charData={charData} />
 			</div>
+			<CharLifeSkill charData={charData} />
+			<CharSkins charData={charData} />
 		</div>
 	)
 }

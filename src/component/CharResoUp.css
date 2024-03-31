@@ -1,53 +1,61 @@
-div { box-sizing: border-box; }
+* { box-sizing: border-box; }
 
 .charater-resoUpgrade {
   display: flex;
-  max-width: 50rem;
+  flex-direction: column;
+}
+
+.title-reso-upgrade {
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
 }
 
 .resoup-icon-area {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 50%;
-  max-width: 25rem;
-  height: 25rem;
+  width: 28rem;
+  height: 28rem;
   border: solid 1px;
   background-image: url('../reosbg.png');
   background-size: cover;
-  padding: .7rem;
+  padding: .75rem;
+  margin-top: .5rem;
 }
 
 .resoup-icon-table {
   display: flex;
   justify-content: space-between;
-  height: 6.6rem;
+  height: 7.4rem;
 }
 
 .resoup-icon-table.middle {
   justify-content: center;
-  height: 8rem;
+  height: 8.6rem;
 }
 
 .resoup-icon {
   height: 100%;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .resoup-icon img { height: 100%; }
 
 .resoup-detail-area {
-  width: 50%;
-  max-width: 23.8rem;
-  margin-left: 1.2rem;
+  width: 100%;
+  max-width: 28rem;
+  margin-top: 1.2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: solid 1px;
 }
 
 .resoup-detail-area img {
-  width: 32%;
+  width: 28%;
 }
 
 .resoup-detail {
@@ -66,5 +74,11 @@ div { box-sizing: border-box; }
 }
 
 .resoup__no { font-size: .9rem; }
-.resoup__info { font-size: 1.1rem; word-break: keep-all; }
+
+.resoup__info { 
+  font-size: 1.1rem; 
+  word-break: keep-all;
+  text-align: center;
+}
+
 .resoup__life-upgrade { font-size: 1.1rem; }

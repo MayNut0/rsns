@@ -12,4 +12,13 @@
         height: 60px;
         background-color: #b7b7b7;
     }
+
+    .section-footer {
+        width: 76%;
+        min-width: 60rem;
+        height: 60px;
+        display: flex;
+        margin: auto;
+        align-items: center;
+    }
 }

@@ -10,12 +10,14 @@ import CharPage from './pages/CharPage';
 function App() {
   return (
     <div className='App'>
-      <Header />
-      <Routes>
-        <Route path='/' element={ <HomePage /> } />
-        <Route path='/charater/:charName' element={ <CharPage /> } />
-      </Routes>
-      <Footer />
+      <div className='layouts-layout'>
+        <Header />
+        <Routes>
+          <Route path='/' element={ <HomePage /> } />
+          <Route path='/charater/:charName' element={ <CharPage /> } />
+        </Routes>
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -1,0 +1,18 @@
+.charaterList {
+  width: 76%;
+  min-width: 60rem;
+  margin: auto;
+  padding: 2rem 0;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.charaterList button {
+  font-size: 1.5rem;
+
+  margin-right: .8rem;
+  padding: .2rem 1rem;
+
+  cursor: pointer;
+}

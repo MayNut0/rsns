@@ -5,20 +5,21 @@ function CharSkins({ charData }) {
 	let [skinSelect, changeSkin] = useState(0);
 
   return (
-    <div className="charater-skin">
-      <div className={`skin-wrap skin${skinSelect + 1}`}>
-        <div className="skin-img">
+    <div className="section-skin">
+			<div className="title-skin"><span>캐릭터 스킨</span></div>
+      <div className="section-skin-buttons">
+        {charData.skins.map((a, i) => {
+          return (<button type="button" className="button-skin" onClick={() => { changeSkin(skinSelect = i) }} >{charData.skins[i].name}</button>)
+        })}
+      </div>
+      <div className="section-skin-detail">
+        <div className="img-skin">
           <img src={process.env.PUBLIC_URL + '/img/charater/' + charName + '/' + charData.skins[skinSelect].file + '.png'} alt={`skin${skinSelect + 1}`}></img>
         </div>
-        <div className="skin-info-wrap">
-          <div className="skin-button-wrap">
-            {charData.skins.map((a, i) => {
-              return (<button type="button" className="skin-button" onClick={() => { changeSkin(skinSelect = i) }} >{charData.skins[i].name}</button>)
-            })}
-          </div>
-          <div className={`skin-name skin${skinSelect + 1}`}>{charData.skins[skinSelect].name}</div>
-          <div className={`skin-get skin${skinSelect + 1}`}>{charData.skins[skinSelect].get}</div>
-          <div className={`skin-info skin${skinSelect + 1} json-data`}>{charData.skins[skinSelect].info}</div>
+        <div className="box-skin-info">
+          <div className={`skin__name skin${skinSelect + 1}`}>{charData.skins[skinSelect].name}</div>
+          <div className={`skin__get skin${skinSelect + 1}`}>{charData.skins[skinSelect].get}</div>
+          <div className={`skin__info skin${skinSelect + 1} json-data`}>{charData.skins[skinSelect].info}</div>
         </div>
       </div>
     </div>
