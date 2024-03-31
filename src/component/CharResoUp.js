@@ -2,6 +2,11 @@ import React, { useState } from "react";
 
 import './CharResoUp.css';
 
+const resoIcon = (data, num) => {
+	if (num == 2 ) return ("/img/icon/reso/reso_03");
+	else return ('/img/icon/reso/' + data.name.en + '_0' + (num+1));
+}
+
 function CharResoUp({ charData }) {
 	const charName = charData.name.en;
 	let [resoUpKey, setResoUpKey] = useState(0);
@@ -13,28 +18,28 @@ function CharResoUp({ charData }) {
 			<div className="resoup-icon-area">
 				<div className="resoup-icon-table">
 					<div className="resoup-icon" onClick={() => { setResoUpKey(resoUpKey = 1)}}>
-						<img src={process.env.PUBLIC_URL + '/img/charater/' + charName + '/' + charData.resoUpgrade[1].icon + '.png'} alt={`resoUpgrade2`}></img>
+						<img src={process.env.PUBLIC_URL + resoIcon(charData, 1) + '.png'} alt={`resoUpgrade2`}></img>
 					</div>
 					<div className="resoup-icon" onClick={() => { setResoUpKey(resoUpKey = 0)}}>
-						<img src={process.env.PUBLIC_URL + '/img/charater/' + charName + '/' + charData.resoUpgrade[0].icon + '.png'} alt={`resoUpgrade1`}></img>
+						<img src={process.env.PUBLIC_URL + resoIcon(charData, 0) + '.png'} alt={`resoUpgrade1`}></img>
 					</div>
 				</div>
 				<div className="resoup-icon-table middle">
 					<div className="resoup-icon" onClick={() => { setResoUpKey(resoUpKey = 4)}}>
-						<img src={process.env.PUBLIC_URL + '/img/charater/' + charName + '/' + charData.resoUpgrade[4].icon + '.png'} alt={`resoUpgrade5`}></img>
+						<img src={process.env.PUBLIC_URL + resoIcon(charData, 4) + '.png'} alt={`resoUpgrade5`}></img>
 					</div>
 				</div>
 				<div className="resoup-icon-table">
 					<div className="resoup-icon" onClick={() => { setResoUpKey(resoUpKey = 2)}}>
-						<img src={process.env.PUBLIC_URL + '/img/charater/' + charName + '/' + charData.resoUpgrade[2].icon + '.png'} alt={`resoUpgrade3`}></img>
+						<img src={process.env.PUBLIC_URL + resoIcon(charData, 2) + '.png'} alt={`resoUpgrade3`}></img>
 					</div>
 					<div className="resoup-icon" onClick={() => { setResoUpKey(resoUpKey = 3)}}>
-						<img src={process.env.PUBLIC_URL + '/img/charater/' + charName + '/' + charData.resoUpgrade[3].icon + '.png'} alt={`resoUpgrade4`}></img>
+						<img src={process.env.PUBLIC_URL + resoIcon(charData, 3) + '.png'} alt={`resoUpgrade4`}></img>
 					</div>
 				</div>
 			</div>
 			<div className="resoup-detail-area">
-				<img src={process.env.PUBLIC_URL + '/img/charater/' + charName + '/' + charData.resoUpgrade[resoUpKey].icon + '.png'} alt={`resoUpgrade${resoUpKey + 1}`}></img>
+				<img src={process.env.PUBLIC_URL + resoIcon(charData, resoUpKey) + '.png'} alt={`resoUpgrade${resoUpKey + 1}`}></img>
 				<div className="resoup-detail">
 					<div className="resoup__name text-bold">{charData.resoUpgrade[resoUpKey].name}</div>
 					<div className="resoup__no">{resoUpKey + 1}공명</div>

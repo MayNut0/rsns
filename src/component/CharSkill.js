@@ -14,7 +14,7 @@ const CharSkill = ({ charData }) => {
 					{skill.map((a, i) => {
 						return (
 							<div className={(skill[i].derive == 1) ? `icon-skill ${i + 1} derive` : `icon-skill ${i + 1} non-derive`} onClick={() => { skillKeyClick(skillKey = i)}}>
-								<img src={process.env.PUBLIC_URL + '/img/charater/' + nameEn + '/' + skill[i].icon + '.png'} alt={`skill${i + 1}`}></img>
+								<img src={process.env.PUBLIC_URL + '/img/icon/skill/' + nameEn + '_0' + (i + 1) + '.png'} alt={`skill${i + 1}`}></img>
 							</div>
 						)
 					})}
@@ -22,7 +22,7 @@ const CharSkill = ({ charData }) => {
 				<div className="box-skill-detail">
 					<div className={(skill[skillKey].derive == 1) ? `box-skill-detail__derive skill-${skillKey + 1}` : `box-skill-detail__non-derive skill-${skillKey + 1}`}>
 						<div className="icon-skill-detail">
-							<img src={process.env.PUBLIC_URL + '/img/charater/' + nameEn + '/' + skill[skillKey].icon + '.png'} alt={`skill${skillKey + 1}`}></img>
+							<img src={process.env.PUBLIC_URL + '/img/icon/skill/' + nameEn + '_0' + (skillKey + 1) + '.png'} alt={`skill${skillKey + 1}`}></img>
 						</div>
 						<div className="box-skill-detail__text">
 							<div className="box-skill-title">

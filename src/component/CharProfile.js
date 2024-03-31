@@ -32,7 +32,7 @@ const CharProfile = ({ charData }) => {
 	return (
 		<div className="section-profile">
 			<div className="section-profile__left">
-				<img src={process.env.PUBLIC_URL + '/img/charater/' + nameEn + '/' + charData.skins[0].file + '.png'} alt={`skin0`}></img>
+				<img src={process.env.PUBLIC_URL + '/img/skin/' + nameEn + '_0' + (0+1) + '.png'} alt={`skin0`}></img>
 			</div>
 			<div className="section-profile__right">
 				<div className="box-basicInfo">
@@ -82,11 +82,11 @@ const CharProfile = ({ charData }) => {
 					</div>
 					<div className="box-charater-info__box charater-cv jp">
 						<div className="text-info__name"><span>CV(日)</span></div>
-						<div className="text-info__detail"><a href={`https://www.google.com/search?q=${charData.cv.jp}`}>{charData.cv.jp}</a></div>
+						<div className="text-info__detail"><a href={`https://www.google.com/search?q=성우 ${charData.cv.jp}`} target='_blank'>{charData.cv.jp}</a></div>
 					</div>
 					<div className="box-charater-info__box charater-cv cn">
 						<div className="text-info__name"><span>CV(中)</span></div>
-						<div className="text-info__detail"><a href={`https://www.google.com/search?q=${charData.cv.cn}`}>{charData.cv.cn}</a></div>
+						<div className="text-info__detail"><a href={`https://www.google.com/search?q=성우 ${charData.cv.cn}`} target='_blank'>{charData.cv.cn}</a></div>
 					</div>
 					</div>
 				<div className="box-charater-story json-data">{charData.story}</div>

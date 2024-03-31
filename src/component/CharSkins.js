@@ -14,7 +14,7 @@ function CharSkins({ charData }) {
       </div>
       <div className="section-skin-detail">
         <div className="img-skin">
-          <img src={process.env.PUBLIC_URL + '/img/charater/' + charName + '/' + charData.skins[skinSelect].file + '.png'} alt={`skin${skinSelect + 1}`}></img>
+          <img src={process.env.PUBLIC_URL + '/img/skin/' + charName + '_0' + (skinSelect + 1) + '.png'} alt={`skin${skinSelect + 1}`}></img>
         </div>
         <div className="box-skin-info">
           <div className={`skin__name skin${skinSelect + 1}`}>{charData.skins[skinSelect].name}</div>
