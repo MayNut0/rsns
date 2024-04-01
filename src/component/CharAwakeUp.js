@@ -15,7 +15,8 @@ function CharAwakeUp({ charData }) {
 	let [awakeUpKey, setAwakeUpKey] = useState(0);
 
 	return (
-		<div className="section-awake-upgrade">
+		<>
+		<div className="section-awake-upgrade pc">
 			<div className="title-awake-upgrade"><span>각성 효과</span></div>
 			<div className="section-awake-upgrade-icons">
 				{charData.awakeUpgrade.map((a, i) => {
@@ -35,6 +36,24 @@ function CharAwakeUp({ charData }) {
 				</div>
 			</div>
 		</div>
+		<div className="section-awake-upgrade mobile">
+			<div className="title-awake-upgrade"><span>각성 효과</span></div>
+			<div className="section-awake-upgrade-icons">
+				{charData.awakeUpgrade.map((a, i) => {
+					return (
+						<div className="section-awake-upgrade-detail">
+							<img src={process.env.PUBLIC_URL + awakeIcon(charData, i) + '.png'} alt={`awakeUpgrade${i + 1}`}></img>
+							<div className="box-awake-upgrade-detail">
+								<div className="awake-upgrade__name">{charData.awakeUpgrade[i].name}</div>
+								<div className="awake-upgrade__num">{i + 1}각성</div>
+								<div className="awake-upgrade__info">{charData.awakeUpgrade[i].info}</div>
+							</div>
+						</div>
+					)
+				})}
+			</div>
+		</div>
+		</>
 	);
 }
 

@@ -8,127 +8,317 @@
 a { text-decoration: none; color: inherit; }
 
 @media all and (max-width:767px) {
-	.CharaterPage {
-		margin: 20px;
+	.box-charater-skill.pc,
+	.charater-resoUpgrade.pc,
+	.section-awake-upgrade.pc { display: none; }
+	
+	.sections-charpage {
+		padding: 1.5rem;
 	}
 
-	.content-box {
-		margin-top: 20px;
+	.section-profile__left {
+		width: 100%;
+		padding: 0 2rem 1rem 2rem;
 	}
 
-	.content-title>span {
-		font-size: 2.25rem;
+	.section-profile__left img {
+		width: 100%;
+	}
+
+	.section-profile__right {
+		width: 100%;
+	}
+
+	.box-basicInfo {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.box-basicInfo__left {	
+		display: flex;
+		flex-direction: column;
+	}
+
+	.icon-charater-rare { margin-left: -.4rem; }
+	.icon-charater-rare img { height: 2.4rem; }
+
+	.box-charater-name-other { display: flex; } /* 영문,중문이름 */
+
+	.text-charater-name__en,
+	.text-charater-name__ko,
+	.text-charater-name__zh {	/* 캐릭터 이름 */
+		font-size: 1.5rem;
+		padding-right: .7rem;
+		font-weight: 700;
+		color: #5e5e5e;
+		text-transform: capitalize;
+	}
+
+	.text-charater-name__ko { /* 한국어 이름 */
+		font-size: 2.4rem;
+		margin: -.3rem 1rem 0 0;
+		font-weight: 900;
+		color: #000000;
+	}
+
+	.logo-charater-team { width: 6rem; align-content: center; margin: auto 0; } /* 소속 로고 */
+	.logo-charater-team img { width: 100%;}
+
+	/* 포지션, 스킬색상 구역 */
+	.box-charater-case {
+		display: flex;
+		margin-top: 1rem;
+		justify-content: space-between;
+	}
+
+	.box-charater-position { /* 캐릭터 포지션 */
+		font-size: 1.2rem; 
+		font-weight: bold; 
+	}
+
+	.box-charater-skill-color { /* 캐릭터 스킬 */
+		display: flex;
+		align-content: center;
+		flex-wrap: wrap;
+	}
+
+	.color-charater-skill { /*스킬 개별 색상 */
+		width: 2.5rem;
+		height: .5rem;
+		border: solid .1rem;
+	}
+
+	/* 태그 구역 */
+	.box-charater-tag { 
+		display: flex;
+		margin-top: 1rem; 
+		flex-wrap: wrap; 
+	}
+
+	.box-charater-tag div { /* 개별 태그 */
+		font-size: 1.1rem;
+		font-weight: bold;
+		background-color: #E9E9EC;
+		border-radius: 6px;
+		margin: .25rem .5rem .25rem 0;
+		padding: .25rem .5rem;
+	}
+
+	/* 캐릭터 정보 구역 */
+	.box-charater-info {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-top: .7rem;
+	}
+	
+	.box-charater-info__box { /* 개별 박스 */
+		width: 100%;
+		display: flex;
+		padding: .7rem;
+		margin: .3rem 0 ;
+		justify-content: flex-start;
+		box-sizing: border-box;
+		background-color: #eeeeee;
+		border-radius: .5rem;
+	}
+
+	.text-info__name { /* 정보 종류 */
+		display: flex;
+		font-size: 1.1rem;
+		font-weight: bold;
+		white-space: nowrap;
+	}
+
+	.text-info__detail { /* 정보 내용 */
+		padding-left: .5rem;
+		font-size: 1.1rem;
+	}
+
+	/* 캐릭터 스토리 구역 */
+	.box-charater-story {
+		font-size: 1.1rem;
+		line-height: 155%;
+		margin-top: .7rem;
+		word-break: keep-all;
+	}
+	/* 캐릭터 프로필 구역 종료 */
+
+
+	.section-skill { margin-top: 2rem; }
+	.title-charater-skill { font-size: 1.4rem; font-weight: bold; }
+
+	.box-skill-detail__non-derive,
+	.box-skill-detail__derive {
+		display: flex;
+		margin: .6rem 0;
+		border: solid 1px;
+		padding: .6rem;
+	}
+
+	.box-skill-detail__derive {
+		margin-left: 1.2rem;
+	}
+
+	.icon-skill-detail { width: 5rem; min-width: 5rem; height: 5rem; }
+	.icon-skill-detail img { width: 100%; }
+ 
+	.box-skill-detail__text {
+		display: flex;
+		flex-direction: column;
+		margin-left: .6rem;
+	}
+
+	.box-skill-title {
+		display: flex;
+		align-items: center;
+	}
+
+	.box-skill-detail__non-derive .text-skill-derive { display: none; }
+
+	.text-skill-derive {
+		font-size: .9rem;
+		font-weight: bold;
+		padding: .1rem .3rem;
+		border-radius: .3rem;
+		background-color: #cfcfcf;
+		margin-right: .6rem;
+	}
+
+	.text-skill-name {
+		font-size: 1.3rem;
+		font-weight: bold;
+	}
+
+	.box-skill-count { display: flex; margin-top: .3rem; }
+
+	.text-skill-count,
+	.text-skill-cost {
+		font-size: 1rem;
+		margin-right: 1rem;
+	}
+
+	.box-skill-info {
+		margin-top: .3rem;
+		font-size: 1rem;
+		line-height: 155%;
+	}
+
+
+	/* 캐릭터 생활스킬 구역 */
+	.section-life-skill {
+		width: 100%;
+		margin-top: 2rem;
+	}
+
+	.title-life-skill {
+		font-size: 1.4rem;
+		font-weight: bold;
+	}
+
+	.box-life-skill-detail {
+		width: 100%;
+    margin: .6rem 0;
+    padding: .6rem 1rem;
+    border: solid 1px;
+	}
+
+	.life-skill__name {
+		font-size: 1.3rem;
+		font-weight: bold;
+	}
+
+	.life-skill__info {
+		font-size: 1rem;
+		margin-top: .3rem;
+	}
+
+
+	/* 캐릭터 스킨 구역 */
+	.section-skin {
+		width: 100%;
+		margin-top: 2rem;
+	}
+
+	.title-skin {
+		font-size: 1.4rem;
 		font-weight: bolder;
 	}
 
-	.skin-wrap {
-		width:100%;
-	}
-
-	.skin-wrap>img {
-		width: 70%;
-	}
-
-	.charater-name>.name {
-		display: inline-block;
-		margin: 10px;
-	}
-
-	.charater-name>.ko {
-		font-size: 2.25rem;
-	}
-
-	.charater-tag>.tag {
-		display: inline-block;
-		margin-right: 10px;
-	}
-
-	.charater-info {
-		border: solid;
-	}
-
-	.charater-info>div {
-		margin: 5px 0;
-	}
-
-	.skill-info,
-	.reso-upgrade,
-	.awake-upgrade {
-		padding: 10px;
-		margin: 5px 0;
+	.section-skin-buttons {
+		width: 100%;
 		display: flex;
-		border: solid;
+		margin-top: .6rem;
 	}
 
-	.life-skill {
-		padding: 10px;
-		margin: 5px 0;
-		border: solid;
+	.button-skin {
+		font-size: 1rem;
+		padding: .2rem .5rem;
+		margin-right: .5rem;
+		background-color: #ffffff;
+		cursor: pointer;
 	}
 
-	.charater-skill .derive {
-		background-color: #dcdcdc;
-		margin-left: 15px;
+	.section-skin-detail {
+		width: 100%;
 	}
 
-	.skill-info>img,
-	.reso-upgrade>img,
-	.awake-upgrade>img {
-		width: 70px;
-		height: 70px;
-	}
-
-	.skill-detail,
-	.reso-upgrade-detail,
-	.awake-upgrade-detail {
-		margin-left: 10px;
-	}
-
-	.skill__name,
-	.skill__count,
-	.skill__cost,
-	.skill__derive,
-	.reso-upgrade__name,
-	.reso-upgrade__no,
-	.awake-upgrade__name,
-	.awake-upgrade__no {
-		display: inline-block;
-		margin-right: 10px;
-	}
-
-	.skill__info,
-	.reso-upgrade__info,
-	.reso-upgrade__life-upgrade,
-	.awake-upgrade__info,
-	.life-skill__info {
-		margin-top: 10px;
-	}
-
-	.non-derive .skill__derive,
-	.derive .skill__count {
-		display: none;
-	}
-
-	.skill__derive {
-		font-size: 1.25rem;
-		padding: 3px;
-		background-color: #a0a0a0;
-	}
-
-	.reso-upgrade-icon {
+	.img-skin {
+		width: 100%;
+		height: 30rem;
 		display: flex;
+		padding: 1rem 0;
+		margin-top: .5rem;
+		border: solid 1px;
 	}
 
-	.reso-upgrade__icon {
-		width:100px;
+	.img-skin img {
+		width: 100%;
+		max-height: 100%;
+		object-fit: contain;
 	}
 
-	.reso-upgrade__icon>img {
-		width:100%;
+	.box-skin-info {
+		width: 100%;
+		margin-top: .3rem;
 	}
+
+	.skin__name {
+		font-size: 1.3rem;
+		font-weight: bold;
+	}
+
+	.skin__get {
+		margin-top: .3rem;
+		font-size: .9rem;
+	}
+
+	.skin__info {
+		margin-top: .3rem;
+		font-size: 1rem;
+		word-break: keep-all;
+		line-height: 155%;
+	}
+
+
+
+
+
+
+
+
+
+	.img-skin img {
+		width: 100%;
+	}
+
 }
 
 @media all and (min-width:768px) {
+	.box-charater-skill.mobile,
+	.charater-resoUpgrade.mobile,
+	.section-awake-upgrade.mobile { display: none; }
+
 	html {
 		/*font-family: "Noto Serif KR", serif;*/
 		/*ont-family: 'KoPub Batang';*/

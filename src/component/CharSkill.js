@@ -9,7 +9,7 @@ const CharSkill = ({ charData }) => {
 	return (
 		<div className='section-skill'>
 			<div className="title-charater-skill"><span>캐릭터 스킬</span></div>
-			<div className="box-charater-skill">
+			<div className="box-charater-skill pc">
 				<div className="box-skill-icon">
 					{skill.map((a, i) => {
 						return (
@@ -38,6 +38,28 @@ const CharSkill = ({ charData }) => {
 				<div className='box-skill-options'>
 					효과 설명
 				</div>
+			</div>
+			<div className="box-charater-skill mobile">
+					{skill.map((a, i) => {
+						return (
+							<div className={(skill[i].derive == 1) ? `box-skill-detail__derive skill-${i + 1}` : `box-skill-detail__non-derive skill-${i + 1}`}>
+								<div className="icon-skill-detail">
+									<img src={process.env.PUBLIC_URL + '/img/icon/skill/' + nameEn + '_0' + (i + 1) + '.png'} alt={`skill${i + 1}`}></img>
+								</div>
+								<div className="box-skill-detail__text">
+									<div className="box-skill-title">
+										<div className="text-skill-derive">파생 카드</div>
+										<div className="text-skill-name">{skill[i].name}</div>
+									</div>
+									<div className='box-skill-count'>
+										<div className="text-skill-count">수량 : {skill[i].count}개</div>
+										<div className="text-skill-cost">Cost {skill[i].cost}</div>
+									</div>
+									<div className="box-skill-info json-data">{skill[i].info}<br /><br />{skill[i].damage}</div>
+								</div>
+							</div>
+						)
+					})}
 			</div>
 		</div>
 	);

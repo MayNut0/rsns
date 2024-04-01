@@ -13,7 +13,7 @@ function CharResoUp({ charData }) {
 
 	return (
 		<>
-		<div className="content-box charater-resoUpgrade">
+		<div className="content-box charater-resoUpgrade pc">
 			<div className="title-reso-upgrade"><span>공명 효과</span></div>
 			<div className="resoup-icon-area">
 				<div className="resoup-icon-table">
@@ -47,6 +47,22 @@ function CharResoUp({ charData }) {
 					<div className="resoup__life-upgrade">{charData.resoUpgrade[resoUpKey].lifeUpgrade}</div>
 				</div>
 			</div>
+		</div>
+		<div className="content-box charater-resoUpgrade mobile">
+			<div className="title-reso-upgrade"><span>공명 효과</span></div>
+			{charData.resoUpgrade.map((a, i) => {
+				return (
+					<div className="resoup-detail-area">
+						<img src={process.env.PUBLIC_URL + resoIcon(charData, i) + '.png'} alt={`resoUpgrade${i + 1}`}></img>
+						<div className="resoup-detail">
+							<div className="resoup__name text-bold">{charData.resoUpgrade[i].name}</div>
+							<div className="resoup__no">{i + 1}공명</div>
+							<div className="resoup__info">{charData.resoUpgrade[i].info}</div>
+							<div className="resoup__life-upgrade">{charData.resoUpgrade[i].lifeUpgrade}</div>
+						</div>
+					</div>
+				)
+			})}
 		</div>
 		</>
 	);

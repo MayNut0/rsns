@@ -5,8 +5,9 @@
     }
     
     .header {
+        padding: 0 1.5rem;
         display: flex;
-        padding: 0 20px;
+        margin: auto;
         height: 100%;
     }
 
