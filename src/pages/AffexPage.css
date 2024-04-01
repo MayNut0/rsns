@@ -1,0 +1,85 @@
+@media all and (max-width:767px) {
+  .SkillAffix {
+		padding: 1.5rem;
+	}
+
+  .box-affix-data {
+    display: flex;
+    margin: .6rem 0;
+    padding: .5rem;
+    border: solid 1px;
+  }
+
+  .box-affix-data img {
+    width: 3rem;
+    min-width: 3rem;
+    height: 3rem;
+  }
+
+  .box-affix-detail {
+    margin-left: .5rem;
+  }
+
+  .text-affix-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  .text-affix-detail {
+    margin-top: .3rem;
+  }
+
+  .text-affix-damage {
+    margin-top: .3rem;
+  }
+}
+
+@media all and (min-width:768px) {
+  .SkillAffix {
+		width: 76%;
+    min-width: 60rem;
+    margin: 0 auto;
+    padding: 2rem 0;
+	}
+
+  .section-affix-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .box-affix-data {
+    width: 32%;
+    display: flex;
+    margin: .6rem 0;
+    padding: .8rem;
+    border: solid 1px;
+  }
+
+  .box-affix-data img {
+    width: 3.3rem;
+    min-width: 3.3rem;
+    height: 3.3rem;
+  }
+
+  .box-affix-detail {
+    margin-left: .8rem;
+  }
+
+  .text-affix-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  .text-affix-detail {
+    font-size: 1.1rem;
+    word-break: keep-all;
+    margin-top: .3rem;
+    line-height: 150%;
+  }
+
+  .text-affix-damage {
+    display: none;
+    margin-top: .3rem;
+  }
+}
