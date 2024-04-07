@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import AffixData from '../assets/skillAffix.json';
+
 const CharSkill = ({ charData }) => {
 	const skill = charData.skill;
 	const nameEn = charData.name.en;
@@ -36,7 +38,19 @@ const CharSkill = ({ charData }) => {
 					<div className="box-skill-info json-data">{skill[skillKey].info}<br /><br />{skill[skillKey].damage}</div>
 				</div>
 				<div className='box-skill-options'>
-					효과 설명
+					{skill[skillKey].affix.map((a, i) => {
+						function isAffix(element)  { if(element.name === skill[skillKey].affix[i]) { return true; } }
+						const outAffix = AffixData.find(isAffix);
+						return (
+							<div className='box-skill-affix'>
+								<div className='box-skill-affix__top'>
+									<div className='skill-affix__icon' style={{backgroundImage:'url('+process.env.PUBLIC_URL+'/img/icon/affix/affix_'+outAffix.id+'.png)'}}></div>
+									<div className='skill-affix__name'>{outAffix.name}</div>
+								</div>
+								<div className='skill-affix__detail'>{outAffix.detail}</div>
+							</div>
+						)
+					})}
 				</div>
 			</div>
 			<div className="box-charater-skill mobile">

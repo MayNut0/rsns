@@ -1,4 +1,4 @@
-@media all and (max-width:767px) {
+@media all and (max-width:979px) {
   .SkillAffix {
 		padding: 1.5rem;
 	}
@@ -34,7 +34,7 @@
   }
 }
 
-@media all and (min-width:768px) {
+@media all and (min-width:980px) {
   .SkillAffix {
 		width: 76%;
     min-width: 60rem;

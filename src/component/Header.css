@@ -1,4 +1,4 @@
-@media all and (max-width:767px) {
+@media all and (max-width:979px) {
 	.Header {
         height:60px;
         background-color: #bbbde4;
@@ -7,8 +7,9 @@
     .header {
         padding: 0 1.5rem;
         display: flex;
-        margin: auto;
         height: 100%;
+        margin: 0 auto;
+		max-width: 40rem;
     }
 
     .header-left {
@@ -22,7 +23,7 @@
     }
 }
 
-@media all and (min-width:768px) {
+@media all and (min-width:980px) {
     .Header {
         height:60px;
         background-color: #bbbde4;

@@ -32,7 +32,7 @@ function CharAwakeUp({ charData }) {
 				<div className="box-awake-upgrade-detail">
 					<div className="awake-upgrade__name">{charData.awakeUpgrade[awakeUpKey].name}</div>
 					<div className="awake-upgrade__num">{awakeUpKey + 1}각성</div>
-					<div className="awake-upgrade__info">{charData.awakeUpgrade[awakeUpKey].info}</div>
+					<div className="awake-upgrade__info json-data">{charData.awakeUpgrade[awakeUpKey].info}</div>
 				</div>
 			</div>
 		</div>
@@ -46,7 +46,7 @@ function CharAwakeUp({ charData }) {
 							<div className="box-awake-upgrade-detail">
 								<div className="awake-upgrade__name">{charData.awakeUpgrade[i].name}</div>
 								<div className="awake-upgrade__num">{i + 1}각성</div>
-								<div className="awake-upgrade__info">{charData.awakeUpgrade[i].info}</div>
+								<div className="awake-upgrade__info json-data">{charData.awakeUpgrade[i].info}</div>
 							</div>
 						</div>
 					)
