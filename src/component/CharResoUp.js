@@ -43,7 +43,7 @@ function CharResoUp({ charData }) {
 				<div className="resoup-detail">
 					<div className="resoup__name text-bold">{charData.resoUpgrade[resoUpKey].name}</div>
 					<div className="resoup__no">{resoUpKey + 1}공명</div>
-					<div className="resoup__info">{charData.resoUpgrade[resoUpKey].info}</div>
+					<div className="resoup__info json-data">{charData.resoUpgrade[resoUpKey].info}</div>
 					<div className="resoup__life-upgrade">{charData.resoUpgrade[resoUpKey].lifeUpgrade}</div>
 				</div>
 			</div>
@@ -57,7 +57,7 @@ function CharResoUp({ charData }) {
 						<div className="resoup-detail">
 							<div className="resoup__name text-bold">{charData.resoUpgrade[i].name}</div>
 							<div className="resoup__no">{i + 1}공명</div>
-							<div className="resoup__info">{charData.resoUpgrade[i].info}</div>
+							<div className="resoup__info json-data">{charData.resoUpgrade[i].info}</div>
 							<div className="resoup__life-upgrade">{charData.resoUpgrade[i].lifeUpgrade}</div>
 						</div>
 					</div>

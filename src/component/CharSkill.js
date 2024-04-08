@@ -2,11 +2,23 @@ import React, { useState } from 'react';
 
 import AffixData from '../assets/skillAffix.json';
 
+const MobileAffixDetail = ({ outAffix }) => {
+	return (
+		<>
+			<div className='skill-affix__icon' style={{backgroundImage:'url('+process.env.PUBLIC_URL+'/img/icon/affix/affix_'+outAffix.id+'.png)'}}></div>
+			<div className='skill-affix__name'>{outAffix.name}</div>
+			<div className='skill-affix__detail'>{outAffix.detail}</div>
+		</>
+	)
+}
+
 const CharSkill = ({ charData }) => {
 	const skill = charData.skill;
 	const nameEn = charData.name.en;
 	
 	let [skillKey, skillKeyClick] = useState(0);
+	let [mobileAffix, setMobileAffix] = useState([]);
+	let [affixPopup, setAffixPopup] = useState("close");
 	
 	return (
 		<div className='section-skill'>
@@ -35,7 +47,7 @@ const CharSkill = ({ charData }) => {
 							<div className="text-skill-cost">Cost {skill[skillKey].cost}</div>
 						</div>
 					</div>
-					<div className="box-skill-info json-data">{skill[skillKey].info}<br /><br />{skill[skillKey].damage}</div>
+					<div className="box-skill-info json-data">{skill[skillKey].info} {skill[skillKey].damage != "" ? "\n\n" + skill[skillKey].damage : "" }</div>
 				</div>
 				<div className='box-skill-options'>
 					{skill[skillKey].affix.map((a, i) => {
@@ -69,11 +81,27 @@ const CharSkill = ({ charData }) => {
 										<div className="text-skill-count">수량 : {skill[i].count}개</div>
 										<div className="text-skill-cost">Cost {skill[i].cost}</div>
 									</div>
-									<div className="box-skill-info json-data">{skill[i].info}<br /><br />{skill[i].damage}</div>
+									<div className="box-skill-info json-data">{skill[i].info} {skill[i].damage != "" ? "\n\n" + skill[i].damage : "" }</div>
+									<div className='box-skill-affix'>
+										{skill[i].affix.map((a, n) => {
+											function isAffix(element)  { if(element.name === skill[i].affix[n]) { return true; } }
+											const outAffix = AffixData.find(isAffix);
+											return (
+												<div className='box-skill-affix-detail' onClick={() => { setMobileAffix(mobileAffix = outAffix); setAffixPopup(affixPopup = "open") }}>
+													<div className='skill-affix__icon' style={{backgroundImage:'url('+process.env.PUBLIC_URL+'/img/icon/affix/affix_'+outAffix.id+'.png)'}}></div>
+													<div className='skill-affix__name'>{outAffix.name}</div>
+												</div>
+											)
+										})}
+									</div>
 								</div>
 							</div>
 						)
 					})}
+					<div className={'skill-affix-detail '+affixPopup}>
+						<button type='button' className='button-affix-close' onClick={()=>{ setAffixPopup(affixPopup="close") }}>닫기</button>
+						<MobileAffixDetail outAffix={mobileAffix} />
+					</div>
 			</div>
 		</div>
 	);
