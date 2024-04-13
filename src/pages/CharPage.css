@@ -177,6 +177,7 @@ a { text-decoration: none; color: inherit; }
 	}
 
 	.box-skill-detail__non-derive .text-skill-derive { display: none; }
+	.box-skill-detail__derive .text-skill-count { display: none; }
 
 	.text-skill-derive {
 		font-size: .9rem;
@@ -604,6 +605,7 @@ a { text-decoration: none; color: inherit; }
 	}
 
 	.text-skill-name { font-size: 2rem; font-weight: bold; }
+	.box-skill-detail__derive .text-skill-count { display: none; }
 
 	.text-skill-count,
 	.text-skill-cost {
